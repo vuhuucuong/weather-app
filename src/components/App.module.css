@@ -1,0 +1,14 @@
+.appWrapper {
+  background: linear-gradient(to bottom, #4286f4, #373b44);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dayWeatherCard {
+  background-image: url('../assets/images/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
