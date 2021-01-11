@@ -6,7 +6,8 @@ interface GetWeatherParent {
 }
 interface GetWeatherConsolidatedWeather {
   id: number
-  applicable_date: Date
+  created: string
+  applicable_date: string
   weather_state_name: string
   weather_state_abbr: string
   wind_speed: number
@@ -21,26 +22,30 @@ interface GetWeatherConsolidatedWeather {
   predictability: number
 }
 
-export interface SearchLocationResponse {
+export type SearchLocationResponse = {
   title: string
   location_type: string
   latt_long: string
   woeid: number
   distance: number
-}
+}[]
 
 export interface GetWeatherResponse {
   title: string
   location_type: string
   latt_long: string
-  time: Date
-  sun_rise: Date
-  sun_set: Date
+  time: string
+  sun_rise: string
+  sun_set: string
   timezone_name: string
   parent: GetWeatherParent
-  consolidated_weather: GetWeatherConsolidatedWeather
-  source: {
+  consolidated_weather: GetWeatherConsolidatedWeather[]
+  woeid: number
+  timezone: string
+  sources: {
     title: string
     url: string
-  }
+    slug?: string
+    crawl_rate?: number
+  }[]
 }

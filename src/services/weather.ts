@@ -6,20 +6,24 @@ interface SearchLocationParams {
   queryString?: string
 }
 
-export const searchLocation = ({
+export const searchLocation = async ({
   queryType,
   queryString,
 }: SearchLocationParams): Promise<SearchLocationResponse> => {
   const queryKey = queryType === 'text' ? 'query' : 'lattlong'
-  return axios.get(
-    `/weather-api-host/api/location/search/?${queryKey}=${queryString}`
+  const { data } = await axios.get(
+    `http://localhost:3000/api/location/search/?${queryKey}=${queryString}`
   )
+  return data
 }
 
-export const getWeather = ({
-  woeId,
+export const getWeather = async ({
+  woeid,
 }: {
-  woeId: number
+  woeid: number
 }): Promise<GetWeatherResponse> => {
-  return axios.get(`/weather-api-host/api/location/${woeId.toString()}`)
+  const { data } = await axios.get(
+    `http://localhost:3000/api/location/${woeid}`
+  )
+  return data
 }

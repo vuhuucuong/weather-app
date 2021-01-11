@@ -1,0 +1,12 @@
+.dayWeatherCard {
+  background: linear-gradient(to right, #7474bf, #348ac7);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+.currentTemp {
+  line-height: 1;
+}
+.weatherIcon {
+  width: 70px;
+}

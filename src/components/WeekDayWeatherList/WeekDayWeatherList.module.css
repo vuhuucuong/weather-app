@@ -1,0 +1,8 @@
+.weekDayItem {
+  width: 100px;
+  cursor: pointer;
+}
+
+.weekDayItem:hover {
+  background-color: rgba(108, 117, 125, 0.5);
+}

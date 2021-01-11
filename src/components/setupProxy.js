@@ -2,9 +2,9 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 
 module.exports = function (app) {
   app.use(
-    '/weather-api-host',
+    '/api',
     createProxyMiddleware({
-      target: process.env.REACT_APP_API_WEATHER_HOST,
+      target: 'https://www.metaweather.com/api',
       changeOrigin: true,
     })
   )
