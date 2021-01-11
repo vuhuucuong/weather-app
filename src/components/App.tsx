@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './App.module.css'
 import cx from 'classnames'
-import SelectedDayInfo from './SelectedDayInfo'
+import SelectedDayBlock from './SelectedDayBlock'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           styles.dayWeatherCard
         )}
       >
-        <SelectedDayInfo />
+        <SelectedDayBlock />
       </div>
     </div>
   )

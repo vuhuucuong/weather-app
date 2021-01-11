@@ -1,8 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
-import styles from './SelectedDayInfo.module.css'
+import styles from './SelectedDayBlock.module.css'
 
-const SelectedDayInfo = () => {
+const SelectedDayBlock = () => {
   return (
     <div className="d-flex">
       <div className="city-info mr-4">
@@ -26,4 +26,4 @@ const SelectedDayInfo = () => {
   )
 }
 
-export default SelectedDayInfo
+export default SelectedDayBlock
