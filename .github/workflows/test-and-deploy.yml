@@ -1,0 +1,28 @@
+name: Test and Deploy
+
+on:
+  push:
+    branches:
+      - master
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '12'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Deploy to Netlify
+        run: netlify deploy --prod

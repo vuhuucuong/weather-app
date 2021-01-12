@@ -9,7 +9,6 @@ import SearchBar from './SearchBar'
 import WeatherCard from './WeatherCard'
 import CurrentDayBlock from './CurrentDayWeather'
 import WeakDayWeatherList from './WeekDayWeatherList'
-import { getCurrentLatLong } from '../utils'
 import { searchLocation, getWeather } from '../services/weather'
 
 const data: GetWeatherResponse = {
@@ -199,19 +198,12 @@ const weekDayData = data.consolidated_weather.map(
   })
 )
 
-const getCurrentLocationWeather = async ({
-  navigator,
-  getCurrentLatLong,
-}: {
-  navigator: Navigator
-  getCurrentLatLong: (navigator: Navigator) => any
-}) => {
-  const { latitude, longitude } = await getCurrentLatLong(navigator)
-  // get nearest location
+const getCurrentLocationWeather = async () => {
   const [location] = await searchLocation({
-    queryType: 'lattlong',
-    queryString: `${latitude},${longitude}`,
+    queryType: 'text',
+    queryString: `London`,
   })
+  console.log(location)
   const weather = await getWeather({
     woeid: location.woeid,
   })
@@ -219,10 +211,7 @@ const getCurrentLocationWeather = async ({
 }
 function App() {
   useEffect(() => {
-    getCurrentLocationWeather({
-      navigator: window.navigator,
-      getCurrentLatLong,
-    })
+    getCurrentLocationWeather()
   }, [])
   return (
     <div className={styles.appWrapper}>

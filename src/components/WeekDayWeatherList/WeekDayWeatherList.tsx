@@ -18,7 +18,7 @@ const WeekDayWeatherList: React.FC<WeekDayWeatherListProps> = ({
   weatherInfoList,
 }) => {
   return (
-    <div className="d-flex flex-wrap">
+    <div className="d-flex flex-wrap justify-content-center">
       {weatherInfoList.map(
         ({ maxTemp, minTemp, theTemp, weatherStateAbbr, applicableDate }) => (
           <div
