@@ -31,7 +31,7 @@ exports[`should match snapshot 1`] = `
       />
     </div>
     <div
-      className="d-flex flex-column justify-content-center text-light p-5 border-0 shadow-sm dayWeatherCard"
+      className="d-flex flex-column justify-content-center text-light border-0 shadow-sm dayWeatherCard"
     >
       <h4
         className="text-center"

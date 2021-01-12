@@ -26,19 +26,17 @@ const CurrentDayWeather: React.FC<CurrentDayWeatherProps> = ({
       data-testid="currentDayWeather"
       className="d-flex justify-content-between"
     >
-      <div className="city-info me-5 d-flex flex-column">
-        <h3>{title}</h3>
-        <h6 className="text-right">
-          {dayjs(applicableDate).format(MMM_DD_YYYY_FORMAT)}
-        </h6>
+      <div className="city-info me-5 d-flex flex-column text-end">
+        <h3 className="text-start">{title}</h3>
+        <h6>{dayjs(applicableDate).format(MMM_DD_YYYY_FORMAT)}</h6>
         <img
-          className={cx('mb-2', styles.weatherIcon)}
+          className={cx('align-self-end mb-2', styles.weatherIcon)}
           src={`https://www.metaweather.com/static/img/weather/${weatherStateAbbr}.svg`}
           alt="weather icon"
         />
         <h5>{weatherStateName}</h5>
       </div>
-      <div className="d-flex flex-column align-items-center justify-content-between">
+      <div className="d-flex flex-column justify-content-between text-start">
         <h3 className={cx('display-3', styles.currentTemp)}>
           {theTemp.toFixed(0)}°C
         </h3>
