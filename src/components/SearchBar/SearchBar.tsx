@@ -55,6 +55,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
       const selectedWoeid = e.target.getAttribute('data-woeid')
       setCityOptions([])
       setIsLoading(true)
+      setSearchValue('')
       const data = await getWeather({ woeid: selectedWoeid })
       const transformedWeatherList = transformWeatherResponse(data)
       setListWeathers(transformedWeatherList)

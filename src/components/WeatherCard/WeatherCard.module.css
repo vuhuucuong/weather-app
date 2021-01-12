@@ -4,7 +4,15 @@
   background-size: cover;
   border-radius: 10px;
   min-height: 500px;
+  padding: 1rem;
 }
+
+@media only screen and (min-width: 500px) {
+  .dayWeatherCard {
+    padding: 1rem 3rem;
+  }
+}
+
 .currentTemp {
   line-height: 1;
 }
