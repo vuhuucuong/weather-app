@@ -3,30 +3,43 @@ import cx from 'classnames'
 import styles from './WeekDayWeatherList.module.css'
 import dayjs from 'dayjs'
 import { formatTemp } from '../../utils'
+import { WeatherInfo } from '../../types/weather'
 
 interface WeekDayWeatherListProps {
-  weatherInfoList: {
-    weatherStateAbbr: string
-    theTemp: number
-    minTemp: number
-    maxTemp: number
-    applicableDate: string
-  }[]
+  weatherInfoList: WeatherInfo[]
+  selectedWeather: WeatherInfo
+  setSelectedWeather: React.Dispatch<React.SetStateAction<WeatherInfo | null>>
 }
 
 const WeekDayWeatherList: React.FC<WeekDayWeatherListProps> = ({
   weatherInfoList,
+  selectedWeather,
+  setSelectedWeather,
 }) => {
+  const handleClickItem = (weatherInfo: WeatherInfo) => () => {
+    setSelectedWeather(weatherInfo)
+  }
   return (
     <div className="d-flex flex-wrap justify-content-center">
-      {weatherInfoList.map(
-        ({ maxTemp, minTemp, theTemp, weatherStateAbbr, applicableDate }) => (
+      {weatherInfoList.map((weatherInfo) => {
+        const {
+          maxTemp,
+          minTemp,
+          theTemp,
+          weatherStateAbbr,
+          applicableDate,
+        } = weatherInfo
+        return (
           <div
             key={applicableDate}
-            onClick={(e) => console.log('asd')}
+            onClick={handleClickItem(weatherInfo)}
             className={cx(
               'd-flex flex-column align-items-center border border-warning rounded-3 p-2 mb-4 mx-2',
-              styles.weekDayItem
+              styles.weekDayItem,
+              {
+                'bg-secondary':
+                  applicableDate === selectedWeather.applicableDate,
+              }
             )}
           >
             <h6>{dayjs(applicableDate).format('dddd')}</h6>
@@ -41,7 +54,7 @@ const WeekDayWeatherList: React.FC<WeekDayWeatherListProps> = ({
             </h6>
           </div>
         )
-      )}
+      })}
     </div>
   )
 }

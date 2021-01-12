@@ -2,18 +2,11 @@ import React from 'react'
 import cx from 'classnames'
 import styles from './CurrentDayWeather.module.css'
 import dayjs from 'dayjs'
+import { WeatherInfo } from '../../types/weather'
 import { MMM_DD_YYYY_FORMAT } from '../../constants'
 
 interface CurrentDayWeatherProps {
-  weatherInfoCurrentDay: {
-    title: string
-    weatherStateName: string
-    theTemp: number
-    minTemp: number
-    maxTemp: number
-    applicableDate: string
-    weatherStateAbbr: string
-  }
+  weatherInfoCurrentDay: WeatherInfo
 }
 
 const CurrentDayWeather: React.FC<CurrentDayWeatherProps> = ({
@@ -29,24 +22,30 @@ const CurrentDayWeather: React.FC<CurrentDayWeatherProps> = ({
     maxTemp,
   } = weatherInfoCurrentDay
   return (
-    <div className="d-flex justify-content-between">
-      <div className="city-info me-5">
+    <div
+      data-testid="currentDayWeather"
+      className="d-flex justify-content-between"
+    >
+      <div className="city-info me-5 d-flex flex-column">
         <h3>{title}</h3>
-        <h6>{dayjs(applicableDate).format(MMM_DD_YYYY_FORMAT)}</h6>
+        <h6 className="text-right">
+          {dayjs(applicableDate).format(MMM_DD_YYYY_FORMAT)}
+        </h6>
         <img
-          className={styles.weatherIcon}
+          className={cx('mb-2', styles.weatherIcon)}
           src={`https://www.metaweather.com/static/img/weather/${weatherStateAbbr}.svg`}
           alt="weather icon"
         />
         <h5>{weatherStateName}</h5>
       </div>
-      <div className="d-flex flex-column align-items-center justify-content-start">
+      <div className="d-flex flex-column align-items-center justify-content-between">
         <h3 className={cx('display-3', styles.currentTemp)}>
           {theTemp.toFixed(0)}°C
         </h3>
         <div>
-          <h5>Min: {minTemp.toFixed(0)}°C</h5>
-          <h5>Max: {maxTemp.toFixed(0)}°C</h5>
+          <h6>
+            Min: {minTemp.toFixed(0)}°C / Max: {maxTemp.toFixed(0)}°C
+          </h6>
         </div>
       </div>
     </div>

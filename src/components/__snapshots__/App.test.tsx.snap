@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div
+  className="appWrapper"
+>
+  <div
+    className="innerContainer"
+  >
+    <div
+      className="w-100 position-relative"
+    >
+      <div
+        className="input-group"
+      >
+        <input
+          className="form-control"
+          data-testid="searchInput"
+          id="searchInput"
+          list="cityDataList"
+          onChange={[Function]}
+          placeholder="Enter city name..."
+          value=""
+        />
+      </div>
+      <ul
+        className="list-group w-100 position-absolute overflow-auto dropDown"
+        data-element-type="dropDown"
+        data-testid="dropDown"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="d-flex flex-column justify-content-center text-light p-5 border-0 shadow-sm dayWeatherCard"
+    >
+      <h4
+        className="text-center"
+      >
+        Please enter a city name to search
+      </h4>
+    </div>
+  </div>
+</div>
+`;

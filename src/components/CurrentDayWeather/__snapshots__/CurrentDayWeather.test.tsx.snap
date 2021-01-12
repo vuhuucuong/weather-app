@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div
+  className="d-flex justify-content-between"
+  data-testid="currentDayWeather"
+>
+  <div
+    className="city-info me-5 d-flex flex-column"
+  >
+    <h3>
+      Ho Chi Minh City
+    </h3>
+    <h6
+      className="text-right"
+    >
+      Wednesday, Jan 13
+    </h6>
+    <img
+      alt="weather icon"
+      className="mb-2 weatherIcon"
+      src="https://www.metaweather.com/static/img/weather/c.svg"
+    />
+    <h5>
+      Clear
+    </h5>
+  </div>
+  <div
+    className="d-flex flex-column align-items-center justify-content-between"
+  >
+    <h3
+      className="display-3 currentTemp"
+    >
+      28
+      °C
+    </h3>
+    <div>
+      <h6>
+        Min: 
+        19
+        °C / Max: 
+        30
+        °C
+      </h6>
+    </div>
+  </div>
+</div>
+`;

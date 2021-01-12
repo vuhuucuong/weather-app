@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
+    "@testing-library/jest-dom": "^5.11.8",
+    "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
@@ -15,6 +15,7 @@
     "classnames": "^2.2.6",
     "dayjs": "^1.10.3",
     "http-proxy-middleware": "^1.0.6",
+    "lodash.debounce": "^4.0.8",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
@@ -24,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
     "serve": "serve -s build -l 4000"
   },
@@ -49,10 +50,14 @@
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@testing-library/react-hooks": "^4.0.1",
     "@types/classnames": "^2.2.11",
+    "@types/lodash.debounce": "^4.0.6",
     "husky": "^4.3.7",
     "lint-staged": ">=10",
+    "msw": "^0.25.0",
     "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.1",
     "serve": "^11.3.2"
   },
   "husky": {
@@ -63,5 +68,16 @@
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/index.tsx",
+      "!src/reportWebVitals.ts",
+      "!src/setupProxy.js",
+      "!src/**/*.d.ts",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/"
+    ]
   }
 }

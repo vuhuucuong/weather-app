@@ -27,7 +27,6 @@ export type SearchLocationResponse = {
   location_type: string
   latt_long: string
   woeid: number
-  distance: number
 }[]
 
 export interface GetWeatherResponse {
@@ -48,4 +47,14 @@ export interface GetWeatherResponse {
     slug?: string
     crawl_rate?: number
   }[]
+}
+
+export interface WeatherInfo {
+  title: string
+  weatherStateName: string
+  theTemp: number
+  minTemp: number
+  maxTemp: number
+  applicableDate: string
+  weatherStateAbbr: string
 }

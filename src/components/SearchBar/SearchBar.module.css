@@ -1,0 +1,10 @@
+.dropDown {
+  max-height: 300px;
+}
+.itemDropDown {
+  cursor: pointer;
+}
+.itemDropDown:hover {
+  background-color: #6c757d;
+  color: #fff;
+}

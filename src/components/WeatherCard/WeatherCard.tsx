@@ -7,7 +7,7 @@ interface WeatherCardProps {}
 const WeatherCard: React.FC<WeatherCardProps> = ({ children }) => {
   return (
     <div
-      className={cx('text-light p-5 border-0 shadow-sm', styles.dayWeatherCard)}
+      className={cx('d-flex flex-column justify-content-center text-light p-5 border-0 shadow-sm', styles.dayWeatherCard)}
     >
       {children}
     </div>
