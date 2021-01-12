@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import renderer from 'react-test-renderer'
-import { transformedWeatherList } from '../../stub/weather'
+import { transformedWeatherList } from '../../stubs/weather'
 import CurrentDayWeather from './CurrentDayWeather'
 
 it('should match snapshot', () => {

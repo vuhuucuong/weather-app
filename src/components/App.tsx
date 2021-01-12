@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import cx from 'classnames'
 import styles from './App.module.css'
 import { WeatherInfo } from '../types/weather'
 import SearchBar from './SearchBar'
@@ -34,7 +35,7 @@ function App() {
       return <h4 className="text-center">Please enter a city name to search</h4>
     }
     return (
-      <>
+      <div className="overflow-auto">
         <CurrentDayBlock weatherInfoCurrentDay={selectedWeather} />
         <hr />
         <WeekDayWeatherList
@@ -42,13 +43,18 @@ function App() {
           setSelectedWeather={setSelectedWeather}
           weatherInfoList={listWeathers}
         />
-      </>
+      </div>
     )
   }
 
   return (
-    <div className={styles.appWrapper}>
-      <div className={styles.innerContainer}>
+    <div className={cx('h-100 w-100', styles.appWrapper)}>
+      <div
+        className={cx(
+          'd-flex flex-column justify-content-center align-items-center',
+          styles.innerContainer
+        )}
+      >
         <SearchBar
           setListWeathers={setListWeathers}
           setIsLoading={setIsLoading}

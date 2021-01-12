@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import renderer from 'react-test-renderer'
-import { searchResponse, weatherListResponse } from '../stub/weather'
+import { searchResponse, weatherListResponse } from '../stubs/weather'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
 import App from './App'

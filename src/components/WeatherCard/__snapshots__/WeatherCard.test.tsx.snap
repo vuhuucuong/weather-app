@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div
+  className="w-100 d-flex flex-column justify-content-center align-items-center text-light border-0 shadow-sm overflow-auto dayWeatherCard"
+>
+  <div>
+    hi
+  </div>
+</div>
+`;

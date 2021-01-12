@@ -58,7 +58,8 @@
     "msw": "^0.25.0",
     "prettier": "^2.2.1",
     "react-test-renderer": "^17.0.1",
-    "serve": "^11.3.2"
+    "serve": "^11.3.2",
+    "ts-jest": "^26.4.4"
   },
   "husky": {
     "hooks": {

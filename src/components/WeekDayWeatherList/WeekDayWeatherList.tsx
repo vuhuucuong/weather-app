@@ -31,6 +31,7 @@ const WeekDayWeatherList: React.FC<WeekDayWeatherListProps> = ({
         } = weatherInfo
         return (
           <div
+            data-testid="weekdayItem"
             key={applicableDate}
             onClick={handleClickItem(weatherInfo)}
             className={cx(

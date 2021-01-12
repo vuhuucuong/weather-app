@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import cx from 'classnames'
-import debouce from 'lodash.debounce'
+import debounce from 'lodash.debounce'
 import { searchLocation, getWeather } from '../../services/weather'
 import { SearchLocationResponse, WeatherInfo } from '../../types/weather'
 import { transformWeatherResponse } from '../../utils'
@@ -22,7 +22,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
 
   const debouncedFetchLocationList = useMemo(
     () =>
-      debouce(async (searchValue: string) => {
+      debounce(async (searchValue: string) => {
         try {
           if (searchValue.trim() !== '') {
             setIsSearching(true)

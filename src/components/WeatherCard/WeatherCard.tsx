@@ -8,7 +8,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({ children }) => {
   return (
     <div
       className={cx(
-        'd-flex flex-column justify-content-center text-light border-0 shadow-sm',
+        'w-100 d-flex flex-column justify-content-center align-items-center text-light border-0 shadow-sm overflow-auto',
         styles.dayWeatherCard
       )}
     >

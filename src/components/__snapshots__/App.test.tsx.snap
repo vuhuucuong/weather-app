@@ -2,10 +2,10 @@
 
 exports[`should match snapshot 1`] = `
 <div
-  className="appWrapper"
+  className="h-100 w-100 appWrapper"
 >
   <div
-    className="innerContainer"
+    className="d-flex flex-column justify-content-center align-items-center innerContainer"
   >
     <div
       className="w-100 position-relative"
@@ -31,7 +31,7 @@ exports[`should match snapshot 1`] = `
       />
     </div>
     <div
-      className="d-flex flex-column justify-content-center text-light border-0 shadow-sm dayWeatherCard"
+      className="w-100 d-flex flex-column justify-content-center align-items-center text-light border-0 shadow-sm overflow-auto dayWeatherCard"
     >
       <h4
         className="text-center"

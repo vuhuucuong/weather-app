@@ -6,11 +6,9 @@ exports[`should match snapshot 1`] = `
   data-testid="currentDayWeather"
 >
   <div
-    className="city-info me-5 d-flex flex-column text-end"
+    className="city-info me-5 d-flex flex-column align-items-start text-start"
   >
-    <h3
-      className="text-start"
-    >
+    <h3>
       Ho Chi Minh City
     </h3>
     <h6>
@@ -18,7 +16,7 @@ exports[`should match snapshot 1`] = `
     </h6>
     <img
       alt="weather icon"
-      className="align-self-end mb-2 weatherIcon"
+      className="mb-2 weatherIcon"
       src="https://www.metaweather.com/static/img/weather/c.svg"
     />
     <h5>
