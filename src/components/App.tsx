@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import camelCase from 'camelcase'
+import React, { useEffect } from 'react'
 import styles from './App.module.css'
 import {
   GetWeatherResponse,
-  GetWeatherConsolidatedWeather,
 } from '../types/weather'
 import SearchBar from './SearchBar'
 import WeatherCard from './WeatherCard'

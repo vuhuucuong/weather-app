@@ -1,8 +1,15 @@
 [build]
-  command = "yarn build"
-  publish = "build"
+command = "yarn build"
+publish = "build"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+force = true
+from = "/api/*"
+headers = {X-From = "Netlify"}
+status = 200
+to = "https://www.metaweather.com/api/:splat"
+
+[[redirects]]
+from = "/*"
+status = 200
+to = "/index.html"
