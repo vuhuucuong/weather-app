@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { mocked } from 'ts-jest/utils'
-import { getWeather, searchLocation } from './weather'
+import { searchLocation } from './weather'
 import { searchResponse, weatherListResponse } from '../stubs/weather'
 
 jest.mock('axios')

@@ -25,9 +25,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
+    "test": "TZ=UTC react-scripts test --coverage",
     "eject": "react-scripts eject",
-    "serve": "serve -s build -l 4000"
+    "serve": "serve -s build -l 4000",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +57,7 @@
     "@types/lodash.debounce": "^4.0.6",
     "husky": "^4.3.7",
     "lint-staged": ">=10",
+    "mockdate": "^3.0.2",
     "msw": "^0.25.0",
     "prettier": "^2.2.1",
     "react-test-renderer": "^17.0.1",
@@ -68,10 +71,11 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,md}": [
+    "*.{js,ts,tsx}": [
       "eslint --fix",
       "prettier --write"
-    ]
+    ],
+    "*.{css}": "prettier --write"
   },
   "jest": {
     "collectCoverageFrom": [

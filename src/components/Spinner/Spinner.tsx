@@ -9,6 +9,7 @@ interface SpinnerProps {
 const Spinner: React.FC<SpinnerProps> = ({ className, size = 20 }) => {
   return (
     <div
+      data-testid="spinner"
       style={{ width: size, height: size }}
       className={cx('spinner-border', className)}
       role="status"

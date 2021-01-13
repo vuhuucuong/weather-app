@@ -3,6 +3,7 @@
 exports[`should match snapshot 1`] = `
 <div
   className="spinner-border"
+  data-testid="spinner"
   role="status"
   style={
     Object {
@@ -22,6 +23,7 @@ exports[`should match snapshot 1`] = `
 exports[`should match snapshot 2`] = `
 <div
   className="spinner-border mb-0"
+  data-testid="spinner"
   role="status"
   style={
     Object {
