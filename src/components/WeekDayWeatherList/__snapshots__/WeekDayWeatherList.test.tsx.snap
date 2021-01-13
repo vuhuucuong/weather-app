@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match snapshot 1`] = `
+<div
+  className="d-flex flex-wrap justify-content-center"
+>
+  <div
+    className="d-flex flex-column align-items-center border border-warning rounded-3 p-2 mb-4 mx-2 weekDayItem bg-secondary"
+    data-testid="weekdayItem"
+    onClick={[Function]}
+  >
+    <h6>
+      Wednesday
+    </h6>
+    <img
+      alt="weather icon"
+      src="https://www.metaweather.com/static/img/weather/c.svg"
+      style={
+        Object {
+          "width": 30,
+        }
+      }
+    />
+    <h4>
+      28
+      °C
+    </h4>
+    <h6
+      className="text-nowrap"
+    >
+      19
+      °C / 
+      30
+      °C
+    </h6>
+  </div>
+  <div
+    className="d-flex flex-column align-items-center border border-warning rounded-3 p-2 mb-4 mx-2 weekDayItem"
+    data-testid="weekdayItem"
+    onClick={[Function]}
+  >
+    <h6>
+      Thursday
+    </h6>
+    <img
+      alt="weather icon"
+      src="https://www.metaweather.com/static/img/weather/lc.svg"
+      style={
+        Object {
+          "width": 30,
+        }
+      }
+    />
+    <h4>
+      30
+      °C
+    </h4>
+    <h6
+      className="text-nowrap"
+    >
+      20
+      °C / 
+      31
+      °C
+    </h6>
+  </div>
+  <div
+    className="d-flex flex-column align-items-center border border-warning rounded-3 p-2 mb-4 mx-2 weekDayItem"
+    data-testid="weekdayItem"
+    onClick={[Function]}
+  >
+    <h6>
+      Friday
+    </h6>
+    <img
+      alt="weather icon"
+      src="https://www.metaweather.com/static/img/weather/lc.svg"
+      style={
+        Object {
+          "width": 30,
+        }
+      }
+    />
+    <h4>
+      31
+      °C
+    </h4>
+    <h6
+      className="text-nowrap"
+    >
+      21
+      °C / 
+      32
+      °C
+    </h6>
+  </div>
+  <div
+    className="d-flex flex-column align-items-center border border-warning rounded-3 p-2 mb-4 mx-2 weekDayItem"
+    data-testid="weekdayItem"
+    onClick={[Function]}
+  >
+    <h6>
+      Saturday
+    </h6>
+    <img
+      alt="weather icon"
+      src="https://www.metaweather.com/static/img/weather/hc.svg"
+      style={
+        Object {
+          "width": 30,
+        }
+      }
+    />
+    <h4>
+      32
+      °C
+    </h4>
+    <h6
+      className="text-nowrap"
+    >
+      22
+      °C / 
+      32
+      °C
+    </h6>
+  </div>
+  <div
+    className="d-flex flex-column align-items-center border border-warning rounded-3 p-2 mb-4 mx-2 weekDayItem"
+    data-testid="weekdayItem"
+    onClick={[Function]}
+  >
+    <h6>
+      Sunday
+    </h6>
+    <img
+      alt="weather icon"
+      src="https://www.metaweather.com/static/img/weather/lr.svg"
+      style={
+        Object {
+          "width": 30,
+        }
+      }
+    />
+    <h4>
+      28
+      °C
+    </h4>
+    <h6
+      className="text-nowrap"
+    >
+      23
+      °C / 
+      30
+      °C
+    </h6>
+  </div>
+  <div
+    className="d-flex flex-column align-items-center border border-warning rounded-3 p-2 mb-4 mx-2 weekDayItem"
+    data-testid="weekdayItem"
+    onClick={[Function]}
+  >
+    <h6>
+      Monday
+    </h6>
+    <img
+      alt="weather icon"
+      src="https://www.metaweather.com/static/img/weather/lc.svg"
+      style={
+        Object {
+          "width": 30,
+        }
+      }
+    />
+    <h4>
+      33
+      °C
+    </h4>
+    <h6
+      className="text-nowrap"
+    >
+      22
+      °C / 
+      32
+      °C
+    </h6>
+  </div>
+</div>
+`;

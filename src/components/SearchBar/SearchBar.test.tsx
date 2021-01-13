@@ -1,16 +1,9 @@
-import {
-  render,
-  screen,
-  fireEvent,
-  cleanup,
-  waitFor,
-} from '@testing-library/react'
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import { searchResponse, weatherListResponse } from '../../stubs/weather'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
 import SearchBar from './SearchBar'
-import { notDeepEqual } from 'assert'
 
 jest.useFakeTimers()
 jest.mock('lodash.debounce', () => (fn: any) => fn)
@@ -61,10 +54,10 @@ it('able to search and click on result', async () => {
 
 it('should not crash when fail network', async () => {
   server.use(
-    rest.get('/api/location/search/*', (req, res, ctx) => {
+    rest.get('/api/location/search/*', () => {
       throw Error('Network error')
     }),
-    rest.get('/api/location/*', (req, res, ctx) => {
+    rest.get('/api/location/*', () => {
       throw Error('Network error')
     })
   )

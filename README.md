@@ -1,46 +1,38 @@
-# Getting Started with Create React App
+# Weather App [![Github Actions](https://github.com/vuhuucuong/weather-app/workflows/Build/badge.svg)](https://github.com/features/actions) [![Netlify Status](https://api.netlify.com/api/v1/badges/9e84bb5b-63de-4412-95fb-5ccd20abe3d5/deploy-status)](https://app.netlify.com/sites/weather-app-cuong/deploys)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Weather App is a React App for displaying weather forecasts
 
-## Available Scripts
+## Demo
 
-In the project directory, you can run:
+[https://weather-app-cuong.netlify.app](https://weather-app-cuong.netlify.app)
 
-### `yarn start`
+## Built with
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [React](https://reactjs.org/)
+- [MetaWeather](https://www.metaweather.com) API
+- [Github Actions](https://github.com/features/actions) + [Netlify](https://www.netlify.com/) CI/CD
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Preview
 
-### `yarn test`
+![test](docs/preview.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `yarn build`
+### Requirements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Node](https://nodejs.org) >= 12
+- [yarn](https://yarnpkg.com) v1
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### How to start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Clone the repository
+- Run `yarn install`
+- Run `yarn start`
+- Open [http://localhost:3000](http://localhost:3000) in browser
 
-### `yarn eject`
+## Test
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Run `yarn test`
+- For coverage, run `yarn test:cover`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![test](docs/test.png)
