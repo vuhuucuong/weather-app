@@ -68,7 +68,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,css,md}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "jest": {
     "collectCoverageFrom": [
